@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <li class="mylist">
+        <UL>Java</UL>
+
+    </li>
+    
+</body>
+<script>
+    //One Way
+    const mydiv=document.createElement("div")
+    console.log(mydiv);
+    mydiv.className="heading";
+    mydiv.id="title";
+    mydiv.setAttribute("abc","anyattribute");
+    mydiv.innerText="Chai aur Code";
+    document.body.appendChild(mydiv)
+
+    // Other way
+    const mydiv1=document.createElement("div")
+    console.log(mydiv1);
+    mydiv1.className="heading1";
+    mydiv1.id="title1";
+    const mytext=document.createTextNode("Harry Bhai");
+    mydiv1.appendChild(mytext);
+    document.body.appendChild(mydiv1);
+    //in the above one first we created a text node and then append that node to the div and then that div to the body.
+    //Edit
+    const edit=document.querySelector('.mylist');
+    edit.outerHTML='<ul>Typescript</ul>'
+    //Remove
+    const lost=document.querySelector('.mylist');
+    //lost.remove();
+
+    
+
+</script>
+</html>
