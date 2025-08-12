@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+</head>
+<body style="background-color: black; color: aliceblue;">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+        <div class="day">Friday</div>
+    </div>
+
+    
+</body>
+<script>
+    const myparent=document.querySelector('.parent');
+    console.log(myparent);//ye sab console may khulega
+    console.log(myparent.children);
+    console.log(myparent.children[1]);
+    console.log(myparent.children[2].style.color="blue");
+    console.log(myparent.firstElementChild);
+    console.log(myparent.lastElementChild);
+    console.log(myparent.childNodes);
+    const mychild=document.querySelector('.day');
+    console.log(mychild.style.color='red')//QS only targets first element that matches the target
+    console.log(mychild.parentElement);
+    console.log(mychild.nextElementSibling);
+    
+</script>
+</html>
