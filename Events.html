@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <h2>AMAZING IMAGES</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="gurl" src="https://www.pexels.com/photo/a-portrait-of-female-wading-in-water-and-wearing-wet-dress-10543152/"></li>
+            <li><img width="200px" id="house" src="https://www.pexels.com/photo/charming-rustic-cottage-amidst-tall-trees-30506033/"></li>
+            <li><img width="200px" id="horse" src="https://www.pexels.com/photo/idyllic-sunset-grazing-in-idaho-mountains-33386992/"></li>
+            <li><img width="200px" id="water" src="https://www.pexels.com/photo/scenic-landscape-of-jotunheimen-national-park-33391693/"></li>
+            <li><a href="https://meet.google.com/landing">Google Meet</a></li>
+        </ul> 
+    </div>
+    
+</body>
+<script>
+    document.getElementById('images').addEventListener('click',function(e){
+        console.log("ul clicked");
+    },false)
+    document.getElementById('gurl').addEventListener('click',function(e){
+        console.log("gurl clicked");
+        // e.stopPropagation(); to stop bubbling up
+    },false)
+    document.getElementById('horse').addEventListener('click',function(e){
+        console.log("horse clicked");
+        
+
+    },true)
+    document.getElementById('horse').addEventListener('click',function(e){
+        console.log(e.target); //img tag will be targeted
+        console.log(e.target.parentNode); //li of img will be targeted
+
+    })
+
+    //To remove on clicking
+    document.getElementById('horse').addEventListener('click',function(e){
+        console.log(e.target.parentNode); //li of img will be targeted
+        let my=e.target.parentNode;
+        my.remove();
+    })
+
+    
+</script>
+</html>
